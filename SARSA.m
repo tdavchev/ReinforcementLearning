@@ -21,14 +21,14 @@ time_course_SARSA = zeros(T,3);
 %initialisation
 Q = 0.1*rand(S,A,P,G); % might have to be changed later
 V = max(Q,[],2);
-eta = 0.1;
-gamma = 0.9;
-epsilon = 0.99;
+% eta = 0.1;
+% gamma = 0.9;
+% epsilon = 0.99;
 reward_course = zeros(T,1);
 reward_mean = zeros(T,1);
-% eta = 0.5;
-% gamma = 1.0;
-% epsilon = 0.1;
+eta = 0.01;
+gamma = 0.859;
+epsilon = 0.06;
 
 stepsToGoal = zeros(T,1);
 maxV = -9999;
@@ -177,31 +177,31 @@ meanR=R/(T-1000)
 fullMR = FullR/T
 maxV
 
-figure('Name', 'Average Reward over LR')
-plot(avg);
-hold on
-title('Average Reward over LR');
-ylabel('Reward')
-xlabel('Trials')
-plot(avg,'ok','LineWidth',0.1,...
-                       'MarkerEdgeColor','b',...
-                       'MarkerFaceColor','g',...
-                       'MarkerSize',1);
-hold off
-drawnow
-% 
-figure('Name', 'Average Reward over LR')
-plot(avg);
-hold on
-title('Average Reward over LR');
-ylabel('Reward')
-xlabel('Trials')
-plot(avg,'ok','LineWidth',0.1,...
-                       'MarkerEdgeColor','b',...
-                       'MarkerFaceColor','g',...
-                       'MarkerSize',1);
-hold off
-drawnow
+% figure('Name', 'Average Reward over LR')
+% plot(avg);
+% hold on
+% title('Average Reward over LR');
+% ylabel('Reward')
+% xlabel('Trials')
+% plot(avg,'ok','LineWidth',0.1,...
+%                        'MarkerEdgeColor','b',...
+%                        'MarkerFaceColor','g',...
+%                        'MarkerSize',1);
+% hold off
+% drawnow
+% % 
+% figure('Name', 'Average Reward over LR')
+% plot(avg);
+% hold on
+% title('Average Reward over LR');
+% ylabel('Reward')
+% xlabel('Trials')
+% plot(avg,'ok','LineWidth',0.1,...
+%                        'MarkerEdgeColor','b',...
+%                        'MarkerFaceColor','g',...
+%                        'MarkerSize',1);
+% hold off
+% drawnow
 % % 
 % figure('Name', 'Steps to goal')
 % plot(stepsToGoal);

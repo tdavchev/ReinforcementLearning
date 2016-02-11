@@ -21,14 +21,14 @@ time_course = zeros(T,3);
 %initialisation
 Q = 0.1*rand(S,A,P,G); % might have to be changed later
 V = max(Q,[],2);
-% set parameters
+% best found parameters
 % eta = 0.01;
 % gamma = 0.85;
 % epsilon = 0.06;
-
+% base parameters
 eta = 0.1;
 gamma = 0.9;
-epsilon = 0.99;
+epsilon = 0.1;
 
 reward_course = zeros(T,1);
 reward_mean = zeros(T,1);
